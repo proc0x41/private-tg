@@ -1,0 +1,15 @@
+[Unit]
+Description=Telegram Bot - Grupo Privado Pago
+After=network.target
+
+[Service]
+Type=simple
+User=seu_usuario
+WorkingDirectory=/caminho/para/private-tg
+Environment=PATH=/caminho/para/private-tg/venv/bin
+ExecStart=/caminho/para/private-tg/venv/bin/python run.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target 
